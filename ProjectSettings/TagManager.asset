@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
+  - enemy2
+  - mermi
   layers:
   - Default
   - TransparentFX
