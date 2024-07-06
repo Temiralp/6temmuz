@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class PlayerMoment : MonoBehaviour
 {
-    //uzay gamısının hareketlerı burdan yonetılıcek
-    void Start()
-    {
-        
-    }
 
-    
     void Update()
     {
-        //yukarı ve aşağı olucak hareketler
+        PlayerUpMoment();
+        PlayerDownMoment();
+    }
+
+    void PlayerUpMoment()
+    {
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            this.gameObject.transform.position += Vector3.up;
+        }
+    }
+    void PlayerDownMoment()
+    {
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            this.gameObject.transform.position += Vector3.down;
+        }
     }
 }
