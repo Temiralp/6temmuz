@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMoment : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float enemySpeed = 0.5f;
 
     void Update()
     {
-        //düþmanýn düz bir düzlem üzerinde hareket etmesini saðlýcaz.
+        MoveEnemy();
+    }
+
+    void MoveEnemy()
+    {
+        transform.position += Vector3.left * (enemySpeed * Time.deltaTime);
     }
 }
