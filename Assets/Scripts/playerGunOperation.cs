@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerGunOperation : MonoBehaviour
+public class PlayerGunOperation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject bulletPrefab;
+    float bulletSpeed = 10.0f;
 
-    // Update is called once per frame
     void Update()
     {
-      //space tuþuna basýldýðýnda ateþ etmesini ve kurþunun bir düzlemde gitmesini istiyoruz.  
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Fire();
+        }
+
+        float verticalInput = Input.GetAxis("Vertical");
+        transform.position += new Vector3(0, verticalInput, 0) * Time.deltaTime;
+    }
+
+    void Fire()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        bullet.GetComponent<Bullet>().speed = bulletSpeed;
+        Debug.Log("Fire");
     }
 }
