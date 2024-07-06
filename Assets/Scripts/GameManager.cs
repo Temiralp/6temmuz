@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //can operasyonu burdan yonetilicek 
     int healt = 3;
 
    
