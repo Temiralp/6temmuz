@@ -16,13 +16,14 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Untagged"))
         {
-            gameObject.SetActive(false);
+            //      gameObject.SetActive(false);
+            Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("enemy2"))
         {
             // Eðer çarpýlan obje "Enemy" etikete sahipse hem kurþunu hem de düþmaný pasif hale getir
-            gameObject.SetActive(false);
-            collision.gameObject.SetActive(false);
+         //   gameObject.SetActive(false);
+           // collision.gameObject.SetActive(false);
         }
     }
 }
