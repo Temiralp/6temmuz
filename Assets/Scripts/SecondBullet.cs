@@ -10,4 +10,13 @@ public class SecondBullet : MonoBehaviour
     {
         transform.position += Vector3.right * (speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
+     
+    }
 }

@@ -8,6 +8,7 @@ TagManager:
   - enemy2
   - mermi
   - mermi2
+  - Wall
   layers:
   - Default
   - TransparentFX

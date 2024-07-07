@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerGunOperation : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    float bulletSpeed = 10.0f;
+
 
     void Update()
     {
@@ -21,7 +21,6 @@ public class PlayerGunOperation : MonoBehaviour
     void Fire()
     {
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-        bullet.GetComponent<Bullet>().speed = bulletSpeed;
         Debug.Log("Fire");
     }
 }
