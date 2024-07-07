@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    float enemySpeed = 0.5f;
+    float enemySpeed = 1.2f;
+    float frequency = 5.8f; // hareketin frekansý
+    float amplitude = 2.0f; // hareketin genliði
+    float time = 0.5f; // zaman hesaplamak için
 
     void Update()
     {
@@ -13,6 +16,13 @@ public class EnemyMovement : MonoBehaviour
 
     void MoveEnemy()
     {
-        transform.position += Vector3.left * (enemySpeed * Time.deltaTime);
+        time += Time.deltaTime * enemySpeed;
+
+        // x ve y pozisyonunu hesapla
+        float x = -time; // x pozisyonu sürekli artacak
+        float y = Mathf.Sin(time * frequency) * amplitude; // y pozisyonu sin dalgasýna göre deðiþecek
+
+        // pozisyonu güncelle
+        transform.position = new Vector3(x, y, transform.position.z);
     }
 }
