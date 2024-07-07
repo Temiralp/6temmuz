@@ -18,5 +18,11 @@ public class Bullet : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        else if (collision.gameObject.CompareTag("enemy2"))
+        {
+            // Eðer çarpýlan obje "Enemy" etikete sahipse hem kurþunu hem de düþmaný pasif hale getir
+            gameObject.SetActive(false);
+            collision.gameObject.SetActive(false);
+        }
     }
 }
