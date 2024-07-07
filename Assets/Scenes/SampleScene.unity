@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 526044493}
   - component: {fileID: 526044491}
   - component: {fileID: 526044495}
+  - component: {fileID: 526044497}
   m_Layer: 0
   m_Name: enemy
   m_TagString: enemy
@@ -433,6 +434,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821ddd68412c12045bd95ccbfc38129c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &526044497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526044490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6e925e759162241bc5ce5f1a0ebf1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6257137838958181671, guid: 9045d11f2df65c24e8d589f9d409510f, type: 3}
+  bulletSpeed: 15
+  fireRate: 1
+  moveSpeed: 5
 --- !u!1 &585248984
 GameObject:
   m_ObjectHideFlags: 0
